@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
+
+Route::resource('meal', 'MealController');
+
+Route::resource('user', 'UserController');
+
+Route::get('/ingredient', 'IngredientController@index');
